@@ -9,4 +9,5 @@ apt-get install webfs python pip
 pip install pychromecast
 
 be shure to change the friendly name of device - it's hardcoded
+
 local IPv4 is detected - in my case third value is the needed wlan-IP
