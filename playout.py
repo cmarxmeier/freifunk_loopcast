@@ -29,6 +29,8 @@ global numclips
 numclips=10
 global activeclip
 activeclip=0
+global port
+port = '8000'
 
 myadresses=ip4_addresses()
 
@@ -61,7 +63,7 @@ if not cast.is_idle:
     cast.quit_app()
     time.sleep(5)
 
-url="http://"+wireless+"/freifunk/videos/freifunk"+str(activeclip)+".mkv"
+url="http://"+wireless+":"+port+"/freifunk/videos/freifunk"+str(activeclip)+".mkv"
 print("Playing: ", url)
 cast.play_media((url), "video/mp4")
 
@@ -85,7 +87,7 @@ while True:
 	if t > 30 and not cast.media_controller.status.player_state == "PLAYING":
 		t = 0
 
-		url = "http://"+wireless+"/freifunk/videos/freifunk"+str(activeclip)+".mkv"
+		url = "http://"+wireless+":"+port+"/freifunk/videos/freifunk"+str(activeclip)+".mkv"
 		print ("Playing: ",url)
 		cast.play_media((url), "video/mp4")
 		activeclip = activeclip + 1
