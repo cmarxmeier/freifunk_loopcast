@@ -41,6 +41,14 @@ wireless = myadresses[2]
 
 print ("My wireless IP: ", wireless)
 
+# Chromecasts
+#  MAC                  friendly name
+#
+# 6C:AD:F8:B1:57:01     Freifunk Chromecast 01
+#
+
+
+
 cast = pychromecast.get_chromecast("Freifunk Chromecast 01")
 yt = youtube.YouTubeController()
 cast.register_handler(yt)
