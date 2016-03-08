@@ -5,7 +5,8 @@ Based on github.com/balloob/pychromecast from Paulus Schoutsen
 makes use of webfs, python, pip, pychromecast
 
 on ubuntu:
-apt-get install webfs python pip 
+apt-get install webfs python pip
+
 pip install pychromecast
 
 be shure to change the friendly name of device - it's hardcoded
