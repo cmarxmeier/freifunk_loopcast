@@ -3,6 +3,7 @@
 ## might need to be installed first by:
 ## 'apt-get install arptables' 
 ##
+		## Do this locally with keyboard and NOT BY SSH - connection gets dropped with next command:
 		#arptables -P INPUT DROP
 		##first get arp -n and check MAC address of FF-Node you are connected to
 		#arptables -A INPUT --source-mac <FF-Node mac-adress> -j ACCEPT
