@@ -1,0 +1,16 @@
+## To protect raspberry from being accessed by non-authorized hosts
+## we set up strict arptable ruleset for any incoming traffic
+## might need to be installed first by:
+## 'apt-get install arptables' 
+##
+		#arptables -P INPUT DROP
+		##first get arp -n and check MAC address of FF-Node you are connected to
+		#arptables -A INPUT --source-mac <FF-Node mac-adress> -j ACCEPT
+		##take mac adresses from arp -n that should also be allowed to connect
+		# arptables -A INPUT --source-mac <allowed mac-adress> -j ACCEPT
+		## List current table
+		#arptables -L -n 
+		## Save curent table to file
+		# arptables-save >arptables.pi
+		## Restore arptables setting
+		# cat arptables.pi | arptables-restore
