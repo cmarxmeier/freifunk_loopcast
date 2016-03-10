@@ -9,3 +9,8 @@ add an entry with:
 and copy a friendlyname_chromecast.service to /etc/avahi/services
 edit it to match chromecasts friendlyname and contains it uuid
 
+check results of 'avahi-browse -a -r -t'
+and getent hosts Friendlyname.local
+
+ping IPv4 of chromecast to get entry into arp-table
+
