@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+
+<!--
+  This file is part of avahi.
+ 
+  avahi is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License as
+  published by the Free Software Foundation; either version 2 of the
+  License, or (at your option) any later version.
+
+  avahi is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with avahi; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+  02111-1307 USA.
+-->
+
+<!-- See avahi.service(5) for more information about this configuration file -->
+
+<service-group>
+
+  <name replace-wildcards="yes"><Friendlyname></name>
+
+  <service protocol="ipv4">
+    <type>_googlecast._tcp</type>
+    <domain-name>local</domain-name>
+    <host-name><Friendlyname>.local</host-name>
+    <port>8009</port>
+     <txt-record>id=<enter uuid here></txt-record>
+     <txt-record>ve=04</txt-record>
+     <txt-record>md=Chromecast</txt-record>
+     <txt-record>ic=/setup/icon.png</txt-record>
+     <txt-record>fn=<Friendlyname></txt-record>
+     <txt-record>ca=4101</txt-record>
+     <txt-record>st=0</txt-record>
+     <txt-record>bs=FA8FCA9315C6</txt-record>
+     <txt-record>rs=</txt-record>   
+  </service>
+
+
+</service-group>
